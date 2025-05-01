@@ -14,18 +14,23 @@
     }
 
     header {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 2rem 1rem 1rem;
+      background-color: #0d0d0d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo img {
+      height: 48px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
       gap: 2rem;
       padding: 0;
-      margin: 1rem 0 0;
+      margin: 0;
     }
 
     nav a {
@@ -39,83 +44,33 @@
       color: #ffffff;
     }
 
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: #e53935;
-      margin: 0;
-    }
-
-    h2 {
-      color: #ffffff;
-      font-size: 2rem;
-      border-left: 5px solid #e53935;
-      padding-left: 0.8rem;
+    .banner {
+      text-align: center;
       margin-top: 3rem;
-      margin-bottom: 1rem;
+    }
+
+    .banner h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-top: 0.5rem;
     }
 
     .intro {
-      margin-top: 1rem;
-      font-size: 1.2rem;
+      margin-top: 3rem;
+      font-size: 1.1rem;
       color: #dddddd;
-      line-height: 1.7;
+      line-height: 1.6;
       text-align: center;
+      padding: 0 1.5rem;
     }
 
-    .what-i-do {
-      margin-top: 3rem;
-      text-align: center;
-    }
-
-    .what-i-do ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .what-i-do li {
-      background-color: #1f1f1f;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      font-weight: bold;
-      color: #cccccc;
-      min-width: 220px;
-    }
-
-    .gallery-preview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .gallery-preview img {
-      width: 100%;
-      border-radius: 8px;
-      border: 1px solid #333;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-preview img:hover {
-      transform: scale(1.03);
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 3rem;
+    .intro .cta-buttons {
+      margin-top: 1.8rem;
     }
 
     .cta-buttons a {
@@ -126,27 +81,20 @@
       font-weight: bold;
       border-radius: 5px;
       transition: background-color 0.3s ease;
+      margin: 0 0.5rem;
     }
 
     .cta-buttons a:hover {
       background-color: #ff6f60;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 4rem;
-      color: #666;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>ZuidFx</h1>
-    <p>Graphic Designer • Football Visuals • #zuidfx</p>
+    <div class="logo">
+      <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo">
+    </div>
     <nav>
       <ul>
         <li><a href="/ZuidFx/">Home</a></li>
@@ -159,40 +107,22 @@
   </header>
 
   <main>
+    <section class="banner">
+      <h1>Football visuals with identity.</h1>
+      <p>Designs made for matchdays, players & fans.</p>
+    </section>
+
     <section class="intro">
-      <h2>Hi, I'm ZuidFx 👋</h2>
       <p>
-        A 17-year-old football graphic designer from the Netherlands. I create visuals like kitswaps, matchday graphics and wallpapers — inspired by Feyenoord and football culture.
+        I'm a 17-year-old graphic designer from the Netherlands, combining football culture and creative visuals. <br/>
+        Specializing in kitswaps, matchday graphics and wallpapers.
       </p>
-    </section>
-
-    <div class="cta-buttons">
-      <a href="/ZuidFx/portfolio/">View Portfolio</a>
-      <a href="/ZuidFx/collaborate/">Work with me</a>
-    </div>
-
-    <section class="what-i-do">
-      <h2>What I Do</h2>
-      <ul>
-        <li>🎨 Kitswaps & Concepts</li>
-        <li>📱 Matchday & Social Media Visuals</li>
-        <li>🌍 Wallpapers & Player Designs</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Latest Visuals</h2>
-      <div class="gallery-preview">
-        <img src="/ZuidFx/assets/images/example1.png" alt="Visual 1">
-        <img src="/ZuidFx/assets/images/example2.png" alt="Visual 2">
-        <img src="/ZuidFx/assets/images/example3.png" alt="Visual 3">
+      <div class="cta-buttons">
+        <a href="/ZuidFx/about/">Read About Me</a>
+        <a href="/ZuidFx/collaborate/">Contact Me</a>
       </div>
     </section>
   </main>
-
-  <footer>
-    &copy; 2025 ZuidFx – Created with passion. Designed for football.
-  </footer>
 
 </body>
 </html>
