@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ZuidFx – Home</title>
+  <title>ZuidFx – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -68,38 +68,23 @@
       text-align: center;
     }
 
-    .gallery-preview {
+    .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
 
-    .gallery-preview img {
-      width: 100%;
-      border-radius: 8px;
+    .placeholder {
+      background-color: #1f1f1f;
       border: 1px solid #333;
-    }
-
-    .cta-buttons {
+      height: 200px;
+      border-radius: 8px;
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .cta-buttons a {
-      background-color: #e53935;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-buttons a:hover {
-      background-color: #ff6f60;
+      color: #777;
+      font-style: italic;
     }
 
     footer {
@@ -116,44 +101,36 @@
 
   <header>
     <h1>ZuidFx</h1>
-    <p>Graphic Designer • Football Visuals • #zuidfx</p>
+    <p>My Portfolio</p>
     <nav>
       <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="portfolio/">Portfolio</a></li>
-        <li><a href="samenwerken/">Collaborate</a></li>
-        <li><a href="over-mij/">About Me</a></li>
-        <li><a href="testimonials/">Testimonials</a></li>
+        <li><a href="/ZuidFx/">Home</a></li>
+        <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
+        <li><a href="/ZuidFx/samenwerken/">Collaborate</a></li>
+        <li><a href="/ZuidFx/over-mij/">About Me</a></li>
+        <li><a href="/ZuidFx/testimonials/">Testimonials</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Welcome to my portfolio</h2>
-      <p>
-        I'm ZuidFx – I create football-inspired graphics, kitswaps, matchday visuals and wallpapers.  
-        Here you'll find a selection of my work and opportunities to collaborate.
-      </p>
-    </section>
+    <h2>My Work</h2>
+    <div class="intro">
+      Here you'll find a collection of my graphics: kitswaps, matchday visuals, wallpapers and more – all in the ZuidFx style.
+    </div>
 
-    <section>
-      <h2>Latest Visuals</h2>
-      <div class="gallery-preview">
-        <img src="assets/images/example1.png" alt="Visual 1">
-        <img src="assets/images/example2.png" alt="Visual 2">
-        <img src="assets/images/example3.png" alt="Visual 3">
-      </div>
-    </section>
-
-    <div class="cta-buttons">
-      <a href="portfolio/">View Portfolio</a>
-      <a href="samenwerken/">Work with me</a>
+    <div class="gallery-grid">
+      <div class="placeholder">Visual 1 (coming soon)</div>
+      <div class="placeholder">Visual 2 (coming soon)</div>
+      <div class="placeholder">Visual 3 (coming soon)</div>
+      <div class="placeholder">Visual 4 (coming soon)</div>
+      <div class="placeholder">Visual 5 (coming soon)</div>
+      <div class="placeholder">Visual 6 (coming soon)</div>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 ZuidFx – Powered by passion & visuals
+    &copy; 2025 ZuidFx – All rights reserved
   </footer>
 
 </body>
