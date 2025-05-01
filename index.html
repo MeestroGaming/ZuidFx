@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -67,6 +68,31 @@
       text-align: center;
     }
 
+    .what-i-do {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .what-i-do ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .what-i-do li {
+      background-color: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      font-weight: bold;
+      color: #cccccc;
+      min-width: 220px;
+    }
+
     .gallery-preview {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -78,6 +104,11 @@
       width: 100%;
       border-radius: 8px;
       border: 1px solid #333;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-preview img:hover {
+      transform: scale(1.03);
     }
 
     .cta-buttons {
@@ -129,11 +160,24 @@
 
   <main>
     <section class="intro">
-      <h2>Welcome to my portfolio</h2>
+      <h2>Hi, I'm ZuidFx 👋</h2>
       <p>
-        I'm ZuidFx — a 17-year-old football graphic designer from the Netherlands.  
-        I create visuals like kitswaps, matchday posts and wallpapers inspired by Feyenoord and the football world.
+        A 17-year-old football graphic designer from the Netherlands. I create visuals like kitswaps, matchday graphics and wallpapers — inspired by Feyenoord and football culture.
       </p>
+    </section>
+
+    <div class="cta-buttons">
+      <a href="/ZuidFx/portfolio/">View Portfolio</a>
+      <a href="/ZuidFx/collaborate/">Work with me</a>
+    </div>
+
+    <section class="what-i-do">
+      <h2>What I Do</h2>
+      <ul>
+        <li>🎨 Kitswaps & Concepts</li>
+        <li>📱 Matchday & Social Media Visuals</li>
+        <li>🌍 Wallpapers & Player Designs</li>
+      </ul>
     </section>
 
     <section>
@@ -144,11 +188,6 @@
         <img src="/ZuidFx/assets/images/example3.png" alt="Visual 3">
       </div>
     </section>
-
-    <div class="cta-buttons">
-      <a href="/ZuidFx/portfolio/">View Portfolio</a>
-      <a href="/ZuidFx/collaborate/">Work with me</a>
-    </div>
   </main>
 
   <footer>
