@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ZuidFx – Portfolio</title>
+  <title>ZuidFx – Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,23 +13,30 @@
       color: #ffffff;
     }
 
-    header, footer {
+    header {
       background-color: #1a1a1a;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #e53935; /* ZFX-rood */
-      letter-spacing: 2px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 1rem 0 0;
     }
 
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-      color: #cccccc;
+    nav a {
+      color: #e53935;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
     }
 
     main {
@@ -38,65 +45,116 @@
       padding: 2rem 1rem;
     }
 
+    h1 {
+      font-size: 3rem;
+      color: #e53935;
+      margin: 0;
+    }
+
     h2 {
       color: #ffffff;
       font-size: 2rem;
       border-left: 5px solid #e53935;
       padding-left: 0.8rem;
+      margin-top: 3rem;
       margin-bottom: 1rem;
     }
 
     .intro {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      line-height: 1.7;
+      margin-top: 1rem;
+      font-size: 1.2rem;
       color: #dddddd;
+      line-height: 1.7;
+      text-align: center;
     }
 
     .gallery-preview {
-      background-color: #1f1f1f;
-      padding: 2rem;
-      border: 1px solid #333;
-      border-radius: 8px;
-      text-align: center;
-      font-style: italic;
-      color: #888;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    footer p {
+    .gallery-preview img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .cta-buttons a {
+      background-color: #e53935;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-buttons a:hover {
+      background-color: #ff6f60;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
       color: #666;
       font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>ZuidFx</h1>
     <p>Grafisch ontwerper • Voetbal visuals • #zuidfx</p>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/samenwerken/">Samenwerken</a></li>
+        <li><a href="/over-mij/">Over mij</a></li>
+        <li><a href="/testimonials/">Testimonials</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <section class="intro">
       <h2>Welkom op mijn portfolio</h2>
       <p>
-        Mijn naam is ZuidFx. Ik maak visuals, matchday graphics en kitswaps geïnspireerd door het mooiste spel ter wereld. 
-        Hier vind je een selectie van mijn werk, in dezelfde stijl als op mijn Instagram.
+        Mijn naam is ZuidFx. Ik maak visuals, matchday graphics en kitswaps geïnspireerd door het mooiste spel ter wereld.  
+        Hier zie je een selectie van mijn werk en mogelijkheden voor samenwerkingen.
       </p>
     </section>
 
-    <section class="gallery-preview">
-      <p>🚧 Binnenkort zie je hier een galerij van mijn designs — net als op Instagram.<br>Stay tuned!</p>
+    <section>
+      <h2>Laatste visuals</h2>
+      <div class="gallery-preview">
+        <img src="/assets/images/voorbeeld1.png" alt="Visual 1">
+        <img src="/assets/images/voorbeeld2.png" alt="Visual 2">
+        <img src="/assets/images/voorbeeld3.png" alt="Visual 3">
+      </div>
     </section>
+
+    <div class="cta-buttons">
+      <a href="/portfolio/">Bekijk Portfolio</a>
+      <a href="/samenwerken/">Samenwerken?</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 ZuidFx – Powered by visuals en passie voor voetbal</p>
+    &copy; 2025 ZuidFx – Powered by visuals en passie voor voetbal
   </footer>
+
 </body>
 </html>
