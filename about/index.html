@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me – ZuidFx</title>
+  <meta name="description" content="About ZuidFx – Dutch football designer specialized in matchday visuals, kitswaps and creative edits.">
+  <link rel="icon" href="/ZuidFx/assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,18 +16,41 @@
     }
 
     header {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 2rem 1rem 1rem;
+      background-color: #0d0d0d;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.4rem;
+    }
+
+    .logo-link img {
+      height: 42px;
+    }
+
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+      line-height: 1;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
       gap: 2rem;
       padding: 0;
-      margin: 1rem 0 0;
+      margin: 0;
     }
 
     nav a {
@@ -42,11 +67,11 @@
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem 4rem;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       color: #e53935;
       text-align: center;
     }
@@ -55,7 +80,7 @@
       font-size: 1.15rem;
       color: #dddddd;
       line-height: 1.8;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
 
     .highlight {
@@ -83,29 +108,43 @@
     }
 
     footer {
-      background-color: #1a1a1a;
+      background-color: #0d0d0d;
       text-align: center;
-      padding: 1rem;
-      margin-top: 4rem;
-      color: #666;
+      padding: 2rem 1rem;
+      color: #888;
       font-size: 0.9rem;
+      border-top: 1px solid #2e2e2e;
+    }
+
+    footer a {
+      color: #e53935;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>ZuidFx</h1>
-    <p>About Me</p>
-    <nav>
-      <ul>
-        <li><a href="/ZuidFx/">Home</a></li>
-        <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
-        <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
-        <li><a href="/ZuidFx/about/">About Me</a></li>
-        <li><a href="/ZuidFx/reviews/">Reviews</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <a href="/ZuidFx/" class="logo-link">
+        <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo" loading="lazy">
+        <span class="logo-text">ZuidFx</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/ZuidFx/">Home</a></li>
+          <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
+          <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
+          <li><a href="/ZuidFx/about/">About Me</a></li>
+          <li><a href="/ZuidFx/reviews/">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -129,13 +168,13 @@
 
       <h2 style="margin-top: 2.5rem; color: #ffffff;">What I specialize in:</h2>
       <p>
-        My style is all about <span class="highlight">Feyenoord</span>.  
+        My style is all about <span class="highlight">Feyenoord</span>.
         I focus on matchday visuals, transfer kitswaps, and creative player edits — everything rooted in the identity and emotion of the club I love most.
       </p>
 
-      <p style="margin-top: 2.5rem;">
-        Thanks for checking out my work.  
-        Want to work together or just reach out? Head over to the <a href="/ZuidFx/collaborate/" style="color: #e53935;">collaboration page</a>.
+      <p style="margin-top: 2.5rem; color: #cccccc; border: 1px solid #333; padding: 1rem; border-radius: 6px;">
+        Thanks for checking out my work. <br>
+        Want to work together or just reach out? Go to the <a href="/ZuidFx/collaborate/" style="color: #e53935; font-weight: bold;">collaboration page</a>.
       </p>
     </div>
   </main>
