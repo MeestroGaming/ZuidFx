@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reviews – ZuidFx</title>
+  <meta name="description" content="See what people say about ZuidFx visuals and football design. Testimonials and social feedback.">
+  <link rel="icon" href="/ZuidFx/assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,18 +16,41 @@
     }
 
     header {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 2rem 1rem 1rem;
+      background-color: #0d0d0d;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.4rem;
+    }
+
+    .logo-link img {
+      height: 42px;
+    }
+
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+      line-height: 1;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
       gap: 2rem;
       padding: 0;
-      margin: 1rem 0 0;
+      margin: 0;
     }
 
     nav a {
@@ -42,11 +67,11 @@
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem 4rem;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       color: #e53935;
       text-align: center;
     }
@@ -77,55 +102,85 @@
       color: #e53935;
     }
 
-    footer {
-      background-color: #1a1a1a;
+    .placeholder {
+      margin-top: 3rem;
       text-align: center;
-      padding: 1rem;
-      margin-top: 4rem;
-      color: #666;
+      font-size: 1.1rem;
+      color: #cccccc;
+      border: 1px dashed #444;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .placeholder strong {
+      color: #ffffff;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #e53935;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #ff6f60;
+    }
+
+    footer {
+      background-color: #0d0d0d;
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
       font-size: 0.9rem;
+      border-top: 1px solid #2e2e2e;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>ZuidFx</h1>
-    <p>Reviews</p>
-    <nav>
-      <ul>
-        <li><a href="/ZuidFx/">Home</a></li>
-        <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
-        <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
-        <li><a href="/ZuidFx/about/">About Me</a></li>
-        <li><a href="/ZuidFx/reviews/">Reviews</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <a href="/ZuidFx/" class="logo-link">
+        <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo" loading="lazy">
+        <span class="logo-text">ZuidFx</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/ZuidFx/">Home</a></li>
+          <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
+          <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
+          <li><a href="/ZuidFx/about/">About Me</a></li>
+          <li><a href="/ZuidFx/reviews/">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <h1>What People Say</h1>
 
-    <div class="review-section">
-      <div class="review">
-        <p>“These designs are next-level. You really captured the matchday energy!”</p>
-        <div class="name">@footballdaily</div>
-      </div>
+    <div class="placeholder">
+      <p><strong>No public reviews yet…</strong></p>
+      <p>This page is ready for when future collaborations or feedback roll in.</p>
+    </div>
 
-      <div class="review">
-        <p>“Clean, sharp, and powerful visuals. Can’t wait to post this!”</p>
-        <div class="name">Club Media Team</div>
-      </div>
-
-      <div class="review">
-        <p>“I love what you made for my favorite player. Shared it everywhere!”</p>
-        <div class="name">@feyenoordfanpage</div>
-      </div>
+    <div class="cta">
+      <a href="/ZuidFx/collaborate/">Let's collaborate</a>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 ZuidFx – Big thanks to everyone supporting my work!
+    &copy; 2025 ZuidFx – Reviews coming soon. Thanks for the support!
   </footer>
 
 </body>
