@@ -112,6 +112,30 @@
       background-color: #ff6f60;
     }
 
+    .email-toggle {
+      color: #e53935;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 2rem;
+    }
+
+    .email-toggle:hover {
+      color: #ff6f60;
+    }
+
+    .collab-form-wrapper {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      margin-top: 1rem;
+    }
+
+    .collab-form-wrapper.open {
+      max-height: 1000px;
+    }
+
     form {
       background-color: #1f1f1f;
       border: 1px solid #333;
@@ -204,12 +228,13 @@
     <!-- Instagram Button -->
     <a href="https://instagram.com/zuidfx" class="button" target="_blank" rel="noopener noreferrer">📩 Message me on Instagram</a>
 
-    <!-- Toggle Form -->
-    <p style="margin-top: 2rem; color: #cccccc;">
-      Or <a href="#" id="toggleForm" style="color: #e53935; font-weight: bold;">contact me via email</a>:
-    </p>
+    <!-- Email toggle link -->
+    <div class="email-toggle" onclick="toggleForm()">
+      Or contact me via email <span id="arrow">▼</span>
+    </div>
 
-    <div id="formContainer" style="display: none; margin-top: 1rem;">
+    <!-- Hidden email form -->
+    <div id="formContainer" class="collab-form-wrapper">
       <form action="https://formspree.io/f/xeogaarj" method="POST">
         <input type="hidden" name="_redirect" value="https://meestrogaming.github.io/ZuidFx/thank-you.html">
 
@@ -239,13 +264,12 @@
   </footer>
 
   <script>
-    const toggle = document.getElementById("toggleForm");
-    const form = document.getElementById("formContainer");
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      form.style.display = form.style.display === "none" ? "block" : "none";
-    });
+    function toggleForm() {
+      const form = document.getElementById("formContainer");
+      const arrow = document.getElementById("arrow");
+      form.classList.toggle("open");
+      arrow.textContent = form.classList.contains("open") ? "▲" : "▼";
+    }
   </script>
 
 </body>
