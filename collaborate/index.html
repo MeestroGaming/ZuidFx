@@ -93,42 +93,46 @@
       margin-bottom: 2rem;
     }
 
-    .contact-box {
+    form {
       background-color: #1f1f1f;
       border: 1px solid #333;
       border-radius: 8px;
       padding: 2rem;
+      text-align: left;
     }
 
-    .contact-box p {
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
       color: #cccccc;
-      margin-bottom: 1rem;
     }
 
-    .contact-box a.button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 1rem 2rem;
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #121212;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    form button {
       background-color: #e53935;
       color: white;
       font-weight: bold;
-      text-decoration: none;
+      padding: 1rem 2rem;
+      border: none;
       border-radius: 5px;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s ease;
     }
 
-    .contact-box a.button:hover {
+    form button:hover {
       background-color: #ff6f60;
-    }
-
-    .email-box {
-      margin-top: 1.5rem;
-      color: #cccccc;
-      border: 1px solid #333;
-      padding: 1rem;
-      border-radius: 6px;
-      background-color: #121212;
     }
 
     footer {
@@ -175,17 +179,33 @@
     <h1>🤝 Let’s collaborate!</h1>
     <div class="subheading">Got an idea? Let's make something original, together.</div>
     <p>
-      I'm always open to working with clubs, brands, players, and creatives. Whether it's graphics, kit concepts, matchday visuals, or something unique — if it involves football and creativity, I'm all in. Let’s build something great together.
+      I’m always open to working with clubs, brands, players, and creatives. Whether it's graphics, kit concepts, matchday visuals, or something unique — if it involves football and creativity, I'm all in.
     </p>
 
-    <div class="contact-box">
-      <p>📩 Reach out to me via Instagram or email:</p>
-      <a href="https://instagram.com/zuidfx" class="button" target="_blank" rel="noopener noreferrer">Message me on Instagram</a>
-      <div class="email-box">
-        📧 Or contact me via email:<br>
-        <strong>zuidfx.design@gmail.com</strong>
-      </div>
-    </div>
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <!-- Replace with your Formspree ID above -->
+      <input type="hidden" name="_redirect" value="https://meestrogaming.github.io/ZuidFx/thank-you.html">
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="topic">What are you reaching out about?</label>
+      <select id="topic" name="topic" required>
+        <option value="">Select a topic</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="question">General Question</option>
+        <option value="quote">Request a Quote</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Tell me more..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </main>
 
   <footer>
