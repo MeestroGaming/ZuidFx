@@ -214,91 +214,64 @@
     #topBtn:hover {
       background-color: #ff6f60;
     }
+
+    /* Mobile optimization */
+    @media (max-width: 600px) {
+      header .header-inner {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .banner h1 {
+        font-size: 1.8rem;
+      }
+
+      .banner p,
+      .intro p,
+      .reviews-preview blockquote {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .cta-buttons a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .latest-visuals h2,
+      .reviews-preview h2 {
+        font-size: 1.4rem;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .review-link {
+        display: inline-block;
+        margin-top: 1rem;
+      }
+
+      footer {
+        font-size: 0.85rem;
+        padding: 1.5rem 1rem;
+      }
+    }
   </style>
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <a href="/ZuidFx/" class="logo-link">
-        <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo" loading="lazy">
-        <span class="logo-text">ZuidFx</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="/ZuidFx/">Home</a></li>
-          <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
-          <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
-          <li><a href="/ZuidFx/about/">About Me</a></li>
-          <li><a href="/ZuidFx/reviews/">Reviews</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="banner" data-aos="fade-up">
-      <h1>Design bold. Build fast. Create with ZuidFx.</h1>
-      <p>Football visuals made for matchdays, players & fans worldwide.</p>
-    </section>
-
-    <section class="intro" data-aos="fade-up" data-aos-delay="100">
-      <p>
-        I'm a graphic designer from the Netherlands, blending football culture with clean, striking visuals. <br/>
-        Specialized in kitswaps, matchday graphics, and mobile-ready wallpapers.
-      </p>
-      <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
-        <a href="/ZuidFx/about/">Learn More</a>
-        <a href="/ZuidFx/collaborate/">Let’s Collaborate</a>
-      </div>
-    </section>
-
-    <section class="latest-visuals" data-aos="fade-up" data-aos-delay="300">
-      <h2>Latest Visuals</h2>
-      <div class="visual-grid" data-aos="zoom-in" data-aos-delay="400">
-        <div class="visual">
-          <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1" loading="lazy">
-            <div class="caption">Matchday Graphic 1</div>
-          </a>
-        </div>
-        <div class="visual">
-          <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2" loading="lazy">
-            <div class="caption">Kit Swap – Away Edition</div>
-          </a>
-        </div>
-        <div class="visual">
-          <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic" loading="lazy">
-            <div class="caption">Wallpaper Drop</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews-preview" data-aos="fade-up">
-      <h2>What others say</h2>
-      <blockquote>
-        “ZuidFx reviews coming soon....” – <span>@ZuidFx</span>
-      </blockquote>
-      <a class="review-link" href="/ZuidFx/reviews/">See all reviews →</a>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 ZuidFx. Let’s create something legendary. · <a href="/ZuidFx/collaborate/">Contact</a> · <a href="/ZuidFx/portfolio/">View Portfolio</a>
-  </footer>
-
-  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="topBtn" title="Back to top">↑</button>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-      topBtn.style.display = scrollTop > 300 ? "block" : "none";
-    };
-  </script>
-</body>
-</html>
