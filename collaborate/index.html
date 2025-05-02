@@ -18,31 +18,29 @@
 
     header {
       background-color: #0d0d0d;
-      padding: 2rem 1rem 1rem;
-      text-align: center;
+      padding: 1.5rem 2rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
-    .logo-text {
-      font-size: 2rem;
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-text a {
+      font-size: 1.8rem;
       font-weight: bold;
       color: #ffffff;
-    }
-
-    header p {
-      color: #bbbbbb;
-      margin-top: 0.2rem;
-      font-size: 1rem;
-    }
-
-    nav {
-      margin-top: 1.5rem;
+      text-decoration: none;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
       gap: 2rem;
       padding: 0;
       margin: 0;
@@ -131,17 +129,20 @@
 <body>
 
   <header>
-    <div class="logo-text">ZuidFx</div>
-    <p>Collaborations & Requests</p>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="/ZuidFx/">Home</a></li>
-        <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
-        <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
-        <li><a href="/ZuidFx/about/">About Me</a></li>
-        <li><a href="/ZuidFx/reviews/">Reviews</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <div class="logo-text">
+        <a href="/ZuidFx/">ZuidFx</a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/ZuidFx/">Home</a></li>
+          <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
+          <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
+          <li><a href="/ZuidFx/about/">About Me</a></li>
+          <li><a href="/ZuidFx/reviews/">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
