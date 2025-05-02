@@ -12,6 +12,7 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #0d0d0d;
       color: #ffffff;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -81,12 +82,14 @@
     .cta-buttons a {
       background-color: #e53935;
       color: white;
-      padding: 0.8rem 1.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
       transition: background-color 0.3s ease;
       margin: 0 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
     .cta-buttons a:hover {
@@ -113,20 +116,39 @@
       justify-items: center;
     }
 
-    .visual-grid a {
-      display: block;
-      transition: transform 0.3s ease;
+    .visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
     }
 
-    .visual-grid a:hover {
-      transform: scale(1.05);
-    }
-
-    .visual-grid img {
+    .visual img {
       width: 95%;
       max-width: 340px;
       border-radius: 8px;
       border: 1px solid #333;
+      transition: transform 0.3s ease;
+    }
+
+    .visual:hover img {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .visual:hover .caption {
+      opacity: 1;
     }
 
     #topBtn {
@@ -187,16 +209,33 @@
     <section class="latest-visuals" data-aos="fade-up" data-aos-delay="200">
       <h2>Latest Visuals</h2>
       <div class="visual-grid" data-aos="zoom-in" data-aos-delay="300">
-        <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
-          <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1">
-        </a>
-        <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
-          <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2">
-        </a>
-        <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
-          <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic">
-        </a>
+        <div class="visual">
+          <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
+            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1">
+            <div class="caption">Matchday Graphic 1</div>
+          </a>
+        </div>
+        <div class="visual">
+          <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
+            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2">
+            <div class="caption">Kit Swap – Away Edition</div>
+          </a>
+        </div>
+        <div class="visual">
+          <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
+            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic">
+            <div class="caption">Wallpaper Drop</div>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <section style="margin-top: 5rem;" data-aos="fade-up">
+      <h2 style="color: white; border-left: 5px solid #e53935; padding-left: 0.8rem;">What others say</h2>
+      <blockquote style="font-style: italic; color: #ccc; margin: 1rem 0;">
+        “ZuidFx nailed the vibe. Quick, sharp and original.” – @someone
+      </blockquote>
+      <a href="/ZuidFx/reviews/" style="color: #e53935; font-weight: bold;">See all reviews →</a>
     </section>
   </main>
 
@@ -208,11 +247,8 @@
 
     const topBtn = document.getElementById("topBtn");
     window.onscroll = function () {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      topBtn.style.display = scrollTop > 300 ? "block" : "none";
     };
   </script>
 
