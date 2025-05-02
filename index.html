@@ -87,6 +87,42 @@
     .cta-buttons a:hover {
       background-color: #ff6f60;
     }
+
+    .latest-visuals {
+      margin-top: 4rem;
+      padding: 0 1rem 4rem;
+    }
+
+    .latest-visuals h2 {
+      color: #ffffff;
+      font-size: 2rem;
+      border-left: 5px solid #e53935;
+      padding-left: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      justify-items: center;
+    }
+
+    .visual-grid a {
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .visual-grid a:hover {
+      transform: scale(1.05);
+    }
+
+    .visual-grid img {
+      width: 95%;
+      max-width: 340px;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
   </style>
 </head>
 <body>
@@ -114,52 +150,30 @@
 
     <section class="intro">
       <p>
-        I'm a 17-year-old graphic designer from the Netherlands, combining football culture and creative visuals. <br/>
-        Specializing in kitswaps, matchday graphics and wallpapers.
+        I'm a graphic designer from the Netherlands, combining football culture with creative visuals. <br/>
+        Specializing in kitswaps, matchday graphics, and wallpapers.
       </p>
       <div class="cta-buttons">
-        <a href="/ZuidFx/about/">Read About Me</a>
-        <a href="/ZuidFx/collaborate/">Contact Me</a>
+        <a href="/ZuidFx/about/">My Story</a>
+        <a href="/ZuidFx/collaborate/">Let’s Collaborate</a>
+      </div>
+    </section>
+
+    <section class="latest-visuals">
+      <h2>Latest Visuals</h2>
+      <div class="visual-grid">
+        <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
+          <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1">
+        </a>
+        <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
+          <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2">
+        </a>
+        <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
+          <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic">
+        </a>
       </div>
     </section>
   </main>
 
 </body>
 </html>
-
-<section style="margin-top: 4rem; padding: 0 1rem;">
-  <h2 style="color: #ffffff; font-size: 2rem; border-left: 5px solid #e53935; padding-left: 0.8rem; margin-bottom: 1.5rem;">
-    Latest Visuals
-  </h2>
-
- <div style="
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  justify-items: center;
-">
-    <!-- Visual 1 -->
-    <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" style="display: block; transition: transform 0.3s ease;">
-      <img src="/ZuidFx/assets/images/example1.png" alt="Visual 1"
-        style="width: 95%; max-width: 340px; border-radius: 8px; border: 1px solid #333; transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.05)';"
-        onmouseout="this.style.transform='scale(1)';">
-    </a>
-
-    <!-- Visual 2 -->
-    <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" style="display: block; transition: transform 0.3s ease;">
-      <img src="/ZuidFx/assets/images/example2.png" alt="Visual 2"
-        style="width: 95%; max-width: 340px; border-radius: 8px; border: 1px solid #333; transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.05)';"
-        onmouseout="this.style.transform='scale(1)';">
-    </a>
-
-    <!-- Visual 3 -->
-    <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" style="display: block; transition: transform 0.3s ease;">
-      <img src="/ZuidFx/assets/images/example3.png" alt="Visual 3"
-        style="width: 95%; max-width: 340px; border-radius: 8px; border: 1px solid #333; transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.05)';"
-        onmouseout="this.style.transform='scale(1)';">
-    </a>
-  </div>
-</section>
