@@ -151,6 +151,48 @@
       opacity: 1;
     }
 
+    .reviews-preview {
+      margin-top: 5rem;
+      padding: 3rem 1.5rem 5rem;
+      text-align: center;
+      background-color: #121212;
+      border-top: 1px solid #2e2e2e;
+    }
+
+    .reviews-preview h2 {
+      font-size: 2rem;
+      color: #ffffff;
+      border-left: 5px solid #e53935;
+      padding-left: 0.8rem;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .reviews-preview blockquote {
+      font-style: italic;
+      color: #cccccc;
+      margin: 0 auto 1.2rem;
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .reviews-preview blockquote span {
+      color: #e53935;
+      font-weight: bold;
+    }
+
+    .review-link {
+      color: #e53935;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .review-link:hover {
+      text-decoration: underline;
+    }
+
     #topBtn {
       position: fixed;
       bottom: 30px;
@@ -230,12 +272,12 @@
       </div>
     </section>
 
-    <section style="margin-top: 5rem;" data-aos="fade-up">
-      <h2 style="color: white; border-left: 5px solid #e53935; padding-left: 0.8rem;">What others say</h2>
-      <blockquote style="font-style: italic; color: #ccc; margin: 1rem 0;">
-        “ZuidFx nailed the vibe. Quick, sharp and original.” – @someone
+    <section class="reviews-preview" data-aos="fade-up">
+      <h2>What others say</h2>
+      <blockquote>
+        “ZuidFx nailed the vibe. Quick, sharp and original.” – <span>@someone</span>
       </blockquote>
-      <a href="/ZuidFx/reviews/" style="color: #e53935; font-weight: bold;">See all reviews →</a>
+      <a class="review-link" href="/ZuidFx/reviews/">See all reviews →</a>
     </section>
   </main>
 
