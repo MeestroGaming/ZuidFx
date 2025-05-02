@@ -93,6 +93,25 @@
       margin-bottom: 2rem;
     }
 
+    .button {
+      background-color: #e53935;
+      color: white;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff6f60;
+    }
+
     form {
       background-color: #1f1f1f;
       border: 1px solid #333;
@@ -182,34 +201,52 @@
       I’m always open to working with clubs, brands, players, and creatives. Whether it's graphics, kit concepts, matchday visuals, or something unique — if it involves football and creativity, I'm all in.
     </p>
 
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/xeogaarj" method="POST">
-      <!-- Replace with your Formspree ID above -->
-      <input type="hidden" name="_redirect" value="https://meestrogaming.github.io/ZuidFx/thank-you.html">
+    <!-- Instagram Button -->
+    <a href="https://instagram.com/zuidfx" class="button" target="_blank" rel="noopener noreferrer">📩 Message me on Instagram</a>
 
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+    <!-- Toggle Form -->
+    <p style="margin-top: 2rem; color: #cccccc;">
+      Or <a href="#" id="toggleForm" style="color: #e53935; font-weight: bold;">contact me via email</a>:
+    </p>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
+    <div id="formContainer" style="display: none; margin-top: 1rem;">
+      <form action="https://formspree.io/f/xeogaarj" method="POST">
+        <input type="hidden" name="_redirect" value="https://meestrogaming.github.io/ZuidFx/thank-you.html">
 
-      <label for="topic">What are you reaching out about?</label>
-      <select id="topic" name="topic" required>
-        <option value="">Select a topic</option>
-        <option value="collaboration">Collaboration</option>
-        <option value="question">General Question</option>
-      </select>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="6" required placeholder="Tell me more..."></textarea>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <button type="submit">Send Message</button>
-    </form>
+        <label for="topic">What are you reaching out about?</label>
+        <select id="topic" name="topic" required>
+          <option value="">Select a topic</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="question">General Question</option>
+        </select>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Tell me more..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </main>
 
   <footer>
     &copy; 2025 ZuidFx – Let’s create something legendary. · <a href="/ZuidFx/portfolio/">View my work</a>
   </footer>
+
+  <script>
+    const toggle = document.getElementById("toggleForm");
+    const form = document.getElementById("formContainer");
+
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      form.style.display = form.style.display === "none" ? "block" : "none";
+    });
+  </script>
 
 </body>
 </html>
