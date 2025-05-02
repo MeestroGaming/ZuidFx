@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZuidFx – Home</title>
+  <meta name="description" content="Graphic design portfolio by ZuidFx – Specializing in football visuals, kitswaps, and matchday graphics.">
+  <link rel="icon" href="/ZuidFx/assets/images/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
@@ -193,6 +195,24 @@
       text-decoration: underline;
     }
 
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #2e2e2e;
+    }
+
+    footer a {
+      color: #e53935;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     #topBtn {
       position: fixed;
       bottom: 30px;
@@ -220,7 +240,7 @@
     <div class="logo">
       <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo">
     </div>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="/ZuidFx/">Home</a></li>
         <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
@@ -253,19 +273,19 @@
       <div class="visual-grid" data-aos="zoom-in" data-aos-delay="300">
         <div class="visual">
           <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1">
+            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1" loading="lazy">
             <div class="caption">Matchday Graphic 1</div>
           </a>
         </div>
         <div class="visual">
           <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2">
+            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2" loading="lazy">
             <div class="caption">Kit Swap – Away Edition</div>
           </a>
         </div>
         <div class="visual">
           <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic">
+            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic" loading="lazy">
             <div class="caption">Wallpaper Drop</div>
           </a>
         </div>
@@ -279,6 +299,10 @@
       </blockquote>
       <a class="review-link" href="/ZuidFx/reviews/">See all reviews →</a>
     </section>
+
+    <footer>
+      &copy; 2025 ZuidFx. All rights reserved. · <a href="/ZuidFx/collaborate/">Contact</a>
+    </footer>
   </main>
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="topBtn" title="Back to top">↑</button>
@@ -286,7 +310,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-
     const topBtn = document.getElementById("topBtn");
     window.onscroll = function () {
       const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
