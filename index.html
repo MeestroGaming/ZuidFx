@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZuidFx – Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -19,6 +20,10 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     .logo img {
@@ -123,6 +128,26 @@
       border-radius: 8px;
       border: 1px solid #333;
     }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+    }
+
+    #topBtn:hover {
+      background-color: #ff6f60;
+    }
   </style>
 </head>
 <body>
@@ -143,12 +168,12 @@
   </header>
 
   <main>
-    <section class="banner">
+    <section class="banner" data-aos="fade-up">
       <h1>Football visuals with identity.</h1>
       <p>Designs made for matchdays, players & fans.</p>
     </section>
 
-    <section class="intro">
+    <section class="intro" data-aos="fade-up" data-aos-delay="100">
       <p>
         I'm a graphic designer from the Netherlands, combining football culture with creative visuals. <br/>
         Specializing in kitswaps, matchday graphics, and wallpapers.
@@ -159,9 +184,9 @@
       </div>
     </section>
 
-    <section class="latest-visuals">
+    <section class="latest-visuals" data-aos="fade-up" data-aos-delay="200">
       <h2>Latest Visuals</h2>
-      <div class="visual-grid">
+      <div class="visual-grid" data-aos="zoom-in" data-aos-delay="300">
         <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
           <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1">
         </a>
@@ -174,6 +199,22 @@
       </div>
     </section>
   </main>
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="topBtn" title="Back to top">↑</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+  </script>
 
 </body>
 </html>
