@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    /* HEADER STYLES */
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -16,37 +17,31 @@
       color: #ffffff;
       scroll-behavior: smooth;
     }
-
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0.75rem 2rem;
     }
-
     .logo-link {
       display: flex;
       align-items: center;
       text-decoration: none;
       gap: 0.4rem;
     }
-
     .logo-link img {
       height: 42px;
     }
-
     .logo-text {
       font-size: 1.4rem;
       font-weight: bold;
       color: #ffffff;
       line-height: 1;
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -54,34 +49,30 @@
       padding: 0;
       margin: 0;
     }
-
     nav a {
       color: #e53935;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
-
     nav a:hover {
       color: #ffffff;
     }
 
+    /* CONTENT STYLES */
     .banner {
       text-align: center;
       margin-top: 3rem;
     }
-
     .banner h1 {
       font-size: 2.8rem;
       color: #ffffff;
     }
-
     .banner p {
       font-size: 1.2rem;
       color: #cccccc;
       margin-top: 0.5rem;
     }
-
     .intro {
       margin-top: 3rem;
       font-size: 1.1rem;
@@ -90,11 +81,9 @@
       text-align: center;
       padding: 0 1.5rem;
     }
-
     .cta-buttons {
       margin-top: 1.8rem;
     }
-
     .cta-buttons a {
       background-color: #e53935;
       color: white;
@@ -107,16 +96,13 @@
       margin: 0 0.5rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
-
     .cta-buttons a:hover {
       background-color: #ff6f60;
     }
-
     .latest-visuals {
       margin-top: 4rem;
       padding: 0 1rem 4rem;
     }
-
     .latest-visuals h2 {
       color: #ffffff;
       font-size: 2rem;
@@ -124,20 +110,17 @@
       padding-left: 0.8rem;
       margin-bottom: 1.5rem;
     }
-
     .visual-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.2rem;
       justify-items: center;
     }
-
     .visual {
       position: relative;
       overflow: hidden;
       border-radius: 8px;
     }
-
     .visual img {
       width: 95%;
       max-width: 340px;
@@ -145,11 +128,9 @@
       border: 1px solid #333;
       transition: transform 0.3s ease;
     }
-
     .visual:hover img {
       transform: scale(1.05);
     }
-
     .caption {
       position: absolute;
       bottom: 0;
@@ -162,11 +143,9 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-
     .visual:hover .caption {
       opacity: 1;
     }
-
     .reviews-preview {
       margin-top: 5rem;
       padding: 3rem 1.5rem 5rem;
@@ -174,7 +153,6 @@
       background-color: #121212;
       border-top: 1px solid #2e2e2e;
     }
-
     .reviews-preview h2 {
       font-size: 2rem;
       color: #ffffff;
@@ -183,7 +161,6 @@
       display: inline-block;
       margin-bottom: 1.2rem;
     }
-
     .reviews-preview blockquote {
       font-style: italic;
       color: #cccccc;
@@ -192,23 +169,19 @@
       font-size: 1.1rem;
       line-height: 1.6;
     }
-
     .reviews-preview blockquote span {
       color: #e53935;
       font-weight: bold;
     }
-
     .review-link {
       color: #e53935;
       font-weight: bold;
       text-decoration: none;
       font-size: 1rem;
     }
-
     .review-link:hover {
       text-decoration: underline;
     }
-
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -216,17 +189,14 @@
       font-size: 0.9rem;
       border-top: 1px solid #2e2e2e;
     }
-
     footer a {
       color: #e53935;
       text-decoration: none;
       font-weight: bold;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
-
     #topBtn {
       position: fixed;
       bottom: 30px;
@@ -242,7 +212,6 @@
       z-index: 999;
       transition: background-color 0.3s ease;
     }
-
     #topBtn:hover {
       background-color: #ff6f60;
     }
@@ -267,3 +236,71 @@
       </nav>
     </div>
   </header>
+
+  <main>
+    <section class="banner" data-aos="fade-up">
+      <h1>Football visuals with identity.</h1>
+      <p>Designs made for matchdays, players & fans.</p>
+    </section>
+
+    <section class="intro" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        I'm a graphic designer from the Netherlands, combining football culture with creative visuals. <br/>
+        Specializing in kitswaps, matchday graphics, and wallpapers.
+      </p>
+      <div class="cta-buttons">
+        <a href="/ZuidFx/about/">My Story</a>
+        <a href="/ZuidFx/collaborate/">Let’s Collaborate</a>
+      </div>
+    </section>
+
+    <section class="latest-visuals" data-aos="fade-up" data-aos-delay="200">
+      <h2>Latest Visuals</h2>
+      <div class="visual-grid" data-aos="zoom-in" data-aos-delay="300">
+        <div class="visual">
+          <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
+            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1" loading="lazy">
+            <div class="caption">Matchday Graphic 1</div>
+          </a>
+        </div>
+        <div class="visual">
+          <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
+            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2" loading="lazy">
+            <div class="caption">Kit Swap – Away Edition</div>
+          </a>
+        </div>
+        <div class="visual">
+          <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
+            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic" loading="lazy">
+            <div class="caption">Wallpaper Drop</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-preview" data-aos="fade-up">
+      <h2>What others say</h2>
+      <blockquote>
+        “ZuidFx nailed the vibe. Quick, sharp and original.” – <span>@someone</span>
+      </blockquote>
+      <a class="review-link" href="/ZuidFx/reviews/">See all reviews →</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 ZuidFx. Let’s create something legendary. · <a href="/ZuidFx/collaborate/">Contact</a>
+  </footer>
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="topBtn" title="Back to top">↑</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      topBtn.style.display = scrollTop > 300 ? "block" : "none";
+    };
+  </script>
+</body>
+</html>
