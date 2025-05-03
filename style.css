@@ -26,3 +26,34 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
+/* ======================================
+   Mobile Optimization (max-width: 768px)
+   ====================================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  header,
+  footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
