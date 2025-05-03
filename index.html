@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -211,6 +213,52 @@
     }
     #topBtn:hover {
       background-color: #ff6f60;
+    }
+
+    /* =======================
+       Mobile optimization
+       ======================= */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .banner h1 {
+        font-size: 2rem;
+      }
+
+      .banner p,
+      .intro {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .cta-buttons a {
+        display: block;
+        margin: 0.5rem auto;
+        width: fit-content;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+
+      .reviews-preview {
+        padding: 2rem 1rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
