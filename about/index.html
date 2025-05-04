@@ -8,6 +8,7 @@
   <meta name="author" content="ZuidFx">
   <link rel="icon" href="/ZuidFx/assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -246,7 +247,7 @@
     </div>
   </header>
 
-  <main>
+  <main data-aos="fade-up">
     <h1>Hi, I'm ZuidFx 👋</h1>
     <div class="subtitle">Designer · Feyenoord fan · Creator</div>
 
@@ -283,10 +284,12 @@
     &copy; 2025 ZuidFx – Created with heart. Designed for football. · <a href="/ZuidFx/portfolio/">View Portfolio</a>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({ once: true });
     function toggleMenu() {
-      const wrapper = document.getElementById('mobileWrapper');
-      wrapper.classList.toggle('active');
+      const wrapper = document.getElementById("mobileWrapper");
+      wrapper.classList.toggle("active");
     }
   </script>
 </body>
