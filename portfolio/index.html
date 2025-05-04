@@ -8,7 +8,6 @@
   <meta name="author" content="ZuidFx">
   <link rel="icon" href="/ZuidFx/assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -76,6 +75,10 @@
       font-size: 1.8rem;
       color: white;
       cursor: pointer;
+      position: absolute;
+      right: 1.5rem;
+      top: 1rem;
+      z-index: 1000;
     }
 
     .mobile-nav-wrapper {
@@ -201,7 +204,6 @@
       nav ul {
         display: none;
       }
-
       .menu-toggle {
         display: block;
       }
@@ -209,13 +211,14 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="header-inner">
       <a href="/ZuidFx/" class="logo-link">
         <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo" loading="lazy">
         <span class="logo-text">ZuidFx</span>
       </a>
-      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="/ZuidFx/">Home</a></li>
@@ -226,18 +229,18 @@
         </ul>
         <div class="mobile-nav-wrapper" id="mobileWrapper">
           <div id="mobileNav" class="mobile-nav">
-            <a href="/ZuidFx/">Home</a>
-            <a href="/ZuidFx/portfolio/" class="active">Portfolio</a>
-            <a href="/ZuidFx/collaborate/">Collaborate</a>
-            <a href="/ZuidFx/about/">About Me</a>
-            <a href="/ZuidFx/reviews/">Reviews</a>
+            <a href="/ZuidFx/" onclick="closeMenu()">Home</a>
+            <a href="/ZuidFx/portfolio/" class="active" onclick="closeMenu()">Portfolio</a>
+            <a href="/ZuidFx/collaborate/" onclick="closeMenu()">Collaborate</a>
+            <a href="/ZuidFx/about/" onclick="closeMenu()">About Me</a>
+            <a href="/ZuidFx/reviews/" onclick="closeMenu()">Reviews</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
 
-  <main data-aos="fade-up">
+  <main>
     <h1><span>My</span> Portfolio</h1>
     <h2>My Work</h2>
     <div class="intro">
@@ -258,13 +261,14 @@
     &copy; 2025 ZuidFx – All rights reserved. · <a href="/ZuidFx/collaborate/">Work with me</a>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
-
     function toggleMenu() {
       const wrapper = document.getElementById('mobileWrapper');
       wrapper.classList.toggle('active');
+    }
+    function closeMenu() {
+      const wrapper = document.getElementById('mobileWrapper');
+      wrapper.classList.remove('active');
     }
   </script>
 </body>
