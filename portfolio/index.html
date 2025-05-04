@@ -19,6 +19,9 @@
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-inner {
@@ -61,7 +64,7 @@
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    nav a:hover, nav a.active {
       color: #ffffff;
     }
 
@@ -72,10 +75,14 @@
     }
 
     h1 {
-      font-size: 2.8rem;
-      color: #e53935;
-      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      letter-spacing: -0.5px;
       text-align: center;
+      margin: 0 0 0.5rem;
+    }
+
+    h1 span {
+      color: #e53935;
     }
 
     h2 {
@@ -135,10 +142,11 @@
       color: #e53935;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #ffffff;
     }
   </style>
 </head>
@@ -153,7 +161,7 @@
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="/ZuidFx/">Home</a></li>
-          <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
+          <li><a href="/ZuidFx/portfolio/" class="active">Portfolio</a></li>
           <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
           <li><a href="/ZuidFx/about/">About Me</a></li>
           <li><a href="/ZuidFx/reviews/">Reviews</a></li>
@@ -163,11 +171,10 @@
   </header>
 
   <main>
-    <h1>My Portfolio</h1>
+    <h1><span>My</span> Portfolio</h1>
     <h2>My Work</h2>
     <div class="intro">
-      Here you'll find a selection of my football-themed graphic work — from kitswaps and matchday visuals to wallpapers and custom concepts.  
-      Everything reflects my creative style and love for the game.
+      Here you'll find a selection of my football-themed graphic work — from kitswaps and matchday visuals to wallpapers and custom concepts. Everything reflects my creative style and love for the game.
     </div>
 
     <div class="gallery-grid">
