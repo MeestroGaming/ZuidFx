@@ -120,10 +120,18 @@
     .reviews-preview h2 { font-size: 2rem; border-left: 5px solid #e53935; padding-left: 0.8rem; display: inline-block; margin-bottom: 1.2rem; }
     .reviews-preview blockquote { font-style: italic; color: #cccccc; margin: 0 auto 1.2rem; max-width: 600px; font-size: 1.1rem; line-height: 1.6; }
     .reviews-preview blockquote span { color: #e53935; font-weight: bold; }
-    .review-link { color: #e53935; font-weight: bold; text-decoration: none; font-size: 1rem; }
+    .review-link, footer a {
+      color: #e53935;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    .review-link:hover, footer a:hover {
+      color: #ffffff;
+    }
 
     footer { text-align: center; padding: 2rem 1rem; color: #888; font-size: 0.9rem; border-top: 1px solid #2e2e2e; }
-    footer a { color: #e53935; text-decoration: none; font-weight: bold; }
 
     @media (max-width: 768px) {
       nav ul { display: none; }
@@ -228,9 +236,7 @@
 </footer>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    once: true
-  });
+  AOS.init({ once: true });
   function toggleMenu() {
     const wrapper = document.getElementById('mobileWrapper');
     wrapper.classList.toggle('active');
