@@ -44,6 +44,9 @@
       font-size: clamp(2rem, 6vw, 3.5rem);
       letter-spacing: -0.5px;
     }
+    .banner h1 span {
+      color: #e53935;
+    }
     .banner p {
       font-size: clamp(1rem, 2vw, 1.25rem);
       color: #bbbbbb;
@@ -159,7 +162,7 @@
 </header>
 <main>
   <section class="banner" data-aos="fade-up">
-    <h1><span style="color: #e53935">ZuidFx</span> – Design bold. Build fast.</h1>
+    <h1><span>ZuidFx</span> – Design bold. Build fast.</h1>
     <p>Football visuals made for matchdays, players & fans worldwide.</p>
   </section>
 
@@ -225,7 +228,9 @@
 </footer>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    once: true
+  });
   function toggleMenu() {
     const wrapper = document.getElementById('mobileWrapper');
     wrapper.classList.toggle('active');
