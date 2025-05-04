@@ -72,30 +72,38 @@
       top: 1rem;
       z-index: 1000;
     }
+    .mobile-nav-wrapper {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #0d0d0d;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    .mobile-nav-wrapper.active {
+      max-height: 300px;
+      opacity: 1;
+    }
     .mobile-nav {
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: 1rem;
       padding: 1rem 0;
       text-align: center;
-      background-color: #0d0d0d;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .mobile-nav.active {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
     }
     .mobile-nav a {
       display: block;
       padding: 0.5rem 1rem;
       font-size: 1.1rem;
+      color: #e53935;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover {
+      color: #ffffff;
     }
     .banner {
       text-align: center;
@@ -149,16 +157,41 @@
       margin-bottom: 1.5rem;
     }
     .visual-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.8rem;
-      justify-items: center;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
     .visual img {
-      width: 95%;
-      max-width: 340px;
+      width: 100%;
+      max-width: 280px;
       border-radius: 8px;
       border: 1px solid #333;
+      transition: transform 0.3s ease;
+    }
+    .visual:hover img {
+      transform: scale(1.05);
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .visual:hover .caption {
+      opacity: 1;
     }
     .reviews-preview {
       margin-top: 5rem;
@@ -246,12 +279,14 @@
           <li><a href="/ZuidFx/about/">About Me</a></li>
           <li><a href="/ZuidFx/reviews/">Reviews</a></li>
         </ul>
-        <div id="mobileNav" class="mobile-nav">
-          <a href="/ZuidFx/">Home</a>
-          <a href="/ZuidFx/portfolio/">Portfolio</a>
-          <a href="/ZuidFx/collaborate/">Collaborate</a>
-          <a href="/ZuidFx/about/">About Me</a>
-          <a href="/ZuidFx/reviews/">Reviews</a>
+        <div class="mobile-nav-wrapper" id="mobileWrapper">
+          <div id="mobileNav" class="mobile-nav">
+            <a href="/ZuidFx/">Home</a>
+            <a href="/ZuidFx/portfolio/">Portfolio</a>
+            <a href="/ZuidFx/collaborate/">Collaborate</a>
+            <a href="/ZuidFx/about/">About Me</a>
+            <a href="/ZuidFx/reviews/">Reviews</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -278,13 +313,22 @@
       <h2>Latest Visuals</h2>
       <div class="visual-grid">
         <div class="visual">
-          <a href="#"><img src="/ZuidFx/assets/images/example1.png" alt="Visual 1"></a>
+          <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank">
+            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1">
+            <div class="caption">Matchday Graphic 1</div>
+          </a>
         </div>
         <div class="visual">
-          <a href="#"><img src="/ZuidFx/assets/images/example2.png" alt="Visual 2"></a>
+          <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank">
+            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2">
+            <div class="caption">Kit Swap – Away Edition</div>
+          </a>
         </div>
         <div class="visual">
-          <a href="#"><img src="/ZuidFx/assets/images/example3.png" alt="Visual 3"></a>
+          <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank">
+            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic">
+            <div class="caption">Wallpaper Drop</div>
+          </a>
         </div>
       </div>
     </section>
@@ -306,8 +350,8 @@
   <script>
     AOS.init();
     function toggleMenu() {
-      const mobileNav = document.getElementById('mobileNav');
-      mobileNav.classList.toggle('active');
+      const wrapper = document.getElementById('mobileWrapper');
+      wrapper.classList.toggle('active');
     }
   </script>
 </body>
