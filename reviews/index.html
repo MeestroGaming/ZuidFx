@@ -8,12 +8,14 @@
   <meta name="author" content="ZuidFx">
   <link rel="icon" href="/ZuidFx/assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background-color: #0d0d0d;
       color: #ffffff;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -164,12 +166,11 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 5px;
-      transition: transform 0.2s ease, background-color 0.3s ease;
+      transition: background-color 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
     .cta a:hover {
-      transform: scale(1.05);
       background-color: #ff6f60;
     }
 
@@ -213,7 +214,7 @@
           <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
           <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
           <li><a href="/ZuidFx/about/">About Me</a></li>
-          <li><a href="/ZuidFx/reviews/">Reviews</a></li>
+          <li><a href="/ZuidFx/reviews/" class="active">Reviews</a></li>
         </ul>
         <div class="mobile-nav-wrapper" id="mobileWrapper">
           <div class="mobile-nav">
@@ -221,14 +222,14 @@
             <a href="/ZuidFx/portfolio/">Portfolio</a>
             <a href="/ZuidFx/collaborate/">Collaborate</a>
             <a href="/ZuidFx/about/">About Me</a>
-            <a href="/ZuidFx/reviews/">Reviews</a>
+            <a href="/ZuidFx/reviews/" class="active">Reviews</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main data-aos="fade-up">
     <h1>What People Say</h1>
 
     <div class="placeholder">
@@ -245,7 +246,10 @@
     &copy; 2025 ZuidFx – Reviews coming soon. Thanks for the support! · <a href="/ZuidFx/portfolio/">See my work</a>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({ once: true });
+
     function toggleMenu() {
       const wrapper = document.getElementById("mobileWrapper");
       wrapper.classList.toggle("active");
