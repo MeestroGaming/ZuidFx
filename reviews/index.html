@@ -18,6 +18,10 @@
       scroll-behavior: smooth;
     }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -70,6 +74,11 @@
       color: #ffffff;
     }
 
+    nav a.active {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
     .menu-toggle {
       display: none;
       background: none;
@@ -118,6 +127,10 @@
     }
 
     .mobile-nav a:hover {
+      color: #ffffff;
+    }
+
+    .mobile-nav a.active {
       color: #ffffff;
     }
 
