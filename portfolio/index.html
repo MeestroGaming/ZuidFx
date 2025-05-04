@@ -165,21 +165,17 @@
       margin-top: 2rem;
     }
 
-    .placeholder {
-      background-color: #1f1f1f;
-      border: 1px dashed #555;
-      height: 200px;
+    .visual img {
+      width: 100%;
+      max-width: 280px;
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #aaaaaa;
-      font-style: italic;
-      transition: background-color 0.3s ease;
+      border: 1px solid #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .placeholder:hover {
-      background-color: #2a2a2a;
+    .visual:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(229, 57, 53, 0.3);
     }
 
     footer {
@@ -246,12 +242,36 @@
     </div>
 
     <div class="gallery-grid">
-      <div class="placeholder">Visual 1 (coming soon)</div>
-      <div class="placeholder">Visual 2 (coming soon)</div>
-      <div class="placeholder">Visual 3 (coming soon)</div>
-      <div class="placeholder">Visual 4 (coming soon)</div>
-      <div class="placeholder">Visual 5 (coming soon)</div>
-      <div class="placeholder">Visual 6 (coming soon)</div>
+      <div class="visual">
+        <a href="https://www.instagram.com/p/POST1/" target="_blank">
+          <img src="/ZuidFx/assets/images/visual1.png" alt="Visual 1" loading="lazy">
+        </a>
+      </div>
+      <div class="visual">
+        <a href="https://www.instagram.com/p/POST2/" target="_blank">
+          <img src="/ZuidFx/assets/images/visual2.png" alt="Visual 2" loading="lazy">
+        </a>
+      </div>
+      <div class="visual">
+        <a href="https://www.instagram.com/p/POST3/" target="_blank">
+          <img src="/ZuidFx/assets/images/visual3.png" alt="Visual 3" loading="lazy">
+        </a>
+      </div>
+      <div class="visual">
+        <a href="https://www.instagram.com/p/POST4/" target="_blank">
+          <img src="/ZuidFx/assets/images/visual4.png" alt="Visual 4" loading="lazy">
+        </a>
+      </div>
+      <div class="visual">
+        <a href="https://www.instagram.com/p/POST5/" target="_blank">
+          <img src="/ZuidFx/assets/images/visual5.png" alt="Visual 5" loading="lazy">
+        </a>
+      </div>
+      <div class="visual">
+        <a href="https://www.instagram.com/p/POST6/" target="_blank">
+          <img src="/ZuidFx/assets/images/visual6.png" alt="Visual 6" loading="lazy">
+        </a>
+      </div>
     </div>
   </main>
 
@@ -261,9 +281,7 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      once: true
-    });
+    AOS.init({ once: true });
 
     function toggleMenu() {
       const wrapper = document.getElementById('mobileWrapper');
