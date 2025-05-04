@@ -18,6 +18,10 @@
       scroll-behavior: smooth;
     }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -196,6 +200,7 @@
       text-align: left;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
       max-width: 100%;
+      box-sizing: border-box;
     }
 
     form label {
@@ -215,6 +220,7 @@
       color: #ffffff;
       font-size: 1rem;
       outline: none;
+      box-sizing: border-box;
     }
 
     form input:focus, form select:focus, form textarea:focus {
