@@ -158,21 +158,29 @@
       margin-right: auto;
     }
 
-    .gallery-grid {
+    .visual-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
 
+    .visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      height: 420px;
+      border: 1px solid #333;
+      transition: transform 0.3s ease;
+    }
+
     .visual img {
       width: 100%;
-      max-width: 280px;
+      height: 100%;
+      object-fit: cover;
       border-radius: 8px;
-      border: 1px solid #333;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: block;
-      margin: 0 auto;
     }
 
     .visual:hover img {
@@ -243,7 +251,7 @@
       Here you'll find a selection of my football-themed graphic work — from kitswaps and matchday visuals to wallpapers and custom concepts. Everything reflects my creative style and love for the game.
     </div>
 
-    <div class="gallery-grid">
+    <div class="visual-grid">
       <div class="visual"><img src="/ZuidFx/assets/images/visual1.png" alt="Visual 1" loading="lazy"></div>
       <div class="visual"><img src="/ZuidFx/assets/images/visual2.png" alt="Visual 2" loading="lazy"></div>
       <div class="visual"><img src="/ZuidFx/assets/images/visual3.png" alt="Visual 3" loading="lazy"></div>
@@ -259,7 +267,9 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
+    AOS.init({
+      once: true
+    });
 
     function toggleMenu() {
       const wrapper = document.getElementById('mobileWrapper');
