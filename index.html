@@ -20,12 +20,13 @@
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: relative;
     }
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.75rem 2rem;
+      padding: 0.75rem 1.5rem;
     }
     .logo-link {
       display: flex;
@@ -58,29 +59,49 @@
     nav a:hover {
       color: #ffffff;
     }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .mobile-nav a {
+      display: block;
+      padding: 0.5rem 1rem;
+      font-size: 1.1rem;
+    }
     .banner {
       text-align: center;
       margin-top: 3rem;
+      padding: 0 1rem;
     }
     .banner h1 {
-      font-size: 2.8rem;
-      color: #ffffff;
+      font-size: 2.4rem;
     }
     .banner p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #cccccc;
       margin-top: 0.5rem;
     }
     .intro {
-      margin-top: 3rem;
-      font-size: 1.1rem;
+      margin-top: 2rem;
+      font-size: 1rem;
       color: #dddddd;
       line-height: 1.6;
       text-align: center;
       padding: 0 1.5rem;
     }
     .cta-buttons {
-      margin-top: 1.8rem;
+      margin-top: 1.5rem;
     }
     .cta-buttons a {
       background-color: #e53935;
@@ -91,7 +112,7 @@
       font-weight: bold;
       border-radius: 5px;
       transition: background-color 0.3s ease;
-      margin: 0 0.5rem;
+      margin: 0.5rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       display: inline-block;
     }
@@ -99,12 +120,12 @@
       background-color: #ff6f60;
     }
     .latest-visuals {
-      margin-top: 4rem;
+      margin-top: 3rem;
       padding: 0 1rem 4rem;
     }
     .latest-visuals h2 {
       color: #ffffff;
-      font-size: 2rem;
+      font-size: 1.6rem;
       border-left: 5px solid #e53935;
       padding-left: 0.8rem;
       margin-bottom: 1.5rem;
@@ -115,71 +136,11 @@
       gap: 1.2rem;
       justify-items: center;
     }
-    .visual {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-    }
     .visual img {
       width: 95%;
       max-width: 340px;
       border-radius: 8px;
       border: 1px solid #333;
-      transition: transform 0.3s ease;
-    }
-    .visual:hover img {
-      transform: scale(1.05);
-    }
-    .caption {
-      position: absolute;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      width: 100%;
-      text-align: center;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .visual:hover .caption {
-      opacity: 1;
-    }
-    .reviews-preview {
-      margin-top: 5rem;
-      padding: 3rem 1.5rem 5rem;
-      text-align: center;
-      background-color: #121212;
-      border-top: 1px solid #2e2e2e;
-    }
-    .reviews-preview h2 {
-      font-size: 2rem;
-      color: #ffffff;
-      border-left: 5px solid #e53935;
-      padding-left: 0.8rem;
-      display: inline-block;
-      margin-bottom: 1.2rem;
-    }
-    .reviews-preview blockquote {
-      font-style: italic;
-      color: #cccccc;
-      margin: 0 auto 1.2rem;
-      max-width: 600px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .reviews-preview blockquote span {
-      color: #e53935;
-      font-weight: bold;
-    }
-    .review-link {
-      color: #e53935;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .review-link:hover {
-      text-decoration: underline;
     }
     footer {
       text-align: center;
@@ -193,71 +154,28 @@
       text-decoration: none;
       font-weight: bold;
     }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #e53935;
-      color: white;
-      border: none;
-      padding: 0.6rem 1rem;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-      transition: background-color 0.3s ease;
-    }
-    #topBtn:hover {
-      background-color: #ff6f60;
-    }
 
-    /* =======================
-       Mobile optimization
-       ======================= */
     @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
       nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        display: none;
       }
-
+      .menu-toggle {
+        display: block;
+      }
+      .mobile-nav {
+        display: flex;
+      }
       .banner h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
-
       .banner p,
       .intro {
         font-size: 1rem;
         padding: 0 1rem;
       }
-
       .cta-buttons a {
-        display: block;
-        margin: 0.5rem auto;
-        width: fit-content;
-      }
-
-      .visual-grid {
-        grid-template-columns: 1fr;
-        padding: 0;
-      }
-
-      .reviews-preview {
-        padding: 2rem 1rem;
-      }
-
-      footer {
-        font-size: 0.8rem;
-        padding: 1rem;
+        width: 100%;
+        max-width: 280px;
       }
     }
   </style>
@@ -266,10 +184,11 @@
   <header>
     <div class="header-inner">
       <a href="/ZuidFx/" class="logo-link">
-        <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo" loading="lazy">
+        <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo">
         <span class="logo-text">ZuidFx</span>
       </a>
-      <nav aria-label="Main navigation">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav>
         <ul>
           <li><a href="/ZuidFx/">Home</a></li>
           <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
@@ -277,6 +196,13 @@
           <li><a href="/ZuidFx/about/">About Me</a></li>
           <li><a href="/ZuidFx/reviews/">Reviews</a></li>
         </ul>
+        <div id="mobileNav" class="mobile-nav" style="display: none;">
+          <a href="/ZuidFx/">Home</a>
+          <a href="/ZuidFx/portfolio/">Portfolio</a>
+          <a href="/ZuidFx/collaborate/">Collaborate</a>
+          <a href="/ZuidFx/about/">About Me</a>
+          <a href="/ZuidFx/reviews/">Reviews</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -300,34 +226,17 @@
 
     <section class="latest-visuals" data-aos="fade-up" data-aos-delay="300">
       <h2>Latest Visuals</h2>
-      <div class="visual-grid" data-aos="zoom-in" data-aos-delay="400">
+      <div class="visual-grid">
         <div class="visual">
-          <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1" loading="lazy">
-            <div class="caption">Matchday Graphic 1</div>
-          </a>
+          <a href="#"><img src="/ZuidFx/assets/images/example1.png" alt="Visual 1"></a>
         </div>
         <div class="visual">
-          <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2" loading="lazy">
-            <div class="caption">Kit Swap – Away Edition</div>
-          </a>
+          <a href="#"><img src="/ZuidFx/assets/images/example2.png" alt="Visual 2"></a>
         </div>
         <div class="visual">
-          <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank" title="View on Instagram">
-            <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic" loading="lazy">
-            <div class="caption">Wallpaper Drop</div>
-          </a>
+          <a href="#"><img src="/ZuidFx/assets/images/example3.png" alt="Visual 3"></a>
         </div>
       </div>
-    </section>
-
-    <section class="reviews-preview" data-aos="fade-up">
-      <h2>What others say</h2>
-      <blockquote>
-        “ZuidFx reviews coming soon....” – <span>@ZuidFx</span>
-      </blockquote>
-      <a class="review-link" href="/ZuidFx/reviews/">See all reviews →</a>
     </section>
   </main>
 
@@ -335,16 +244,13 @@
     &copy; 2025 ZuidFx. Let’s create something legendary. · <a href="/ZuidFx/collaborate/">Contact</a> · <a href="/ZuidFx/portfolio/">View Portfolio</a>
   </footer>
 
-  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="topBtn" title="Back to top">↑</button>
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-      topBtn.style.display = scrollTop > 300 ? "block" : "none";
-    };
+    function toggleMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    }
   </script>
 </body>
 </html>
