@@ -8,6 +8,7 @@
   <meta name="author" content="ZuidFx">
   <link rel="icon" href="/ZuidFx/assets/images/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -20,6 +21,9 @@
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-inner {
@@ -38,7 +42,6 @@
 
     .logo-link img {
       height: 42px;
-      margin: 0;
     }
 
     .logo-text {
@@ -64,6 +67,54 @@
     }
 
     nav a:hover {
+      color: #ffffff;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      right: 1.5rem;
+      top: 1rem;
+      z-index: 1000;
+    }
+
+    .mobile-nav-wrapper {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #0d0d0d;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .mobile-nav-wrapper.active {
+      max-height: 300px;
+      opacity: 1;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .mobile-nav a {
+      color: #e53935;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .mobile-nav a:hover {
       color: #ffffff;
     }
 
@@ -198,6 +249,11 @@
     footer a:hover {
       color: #ffffff;
     }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .menu-toggle { display: block; }
+    }
   </style>
 </head>
 <body>
@@ -208,19 +264,29 @@
         <img src="/ZuidFx/assets/images/logo.png" alt="ZuidFx Logo" loading="lazy">
         <span class="logo-text">ZuidFx</span>
       </a>
+      <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="/ZuidFx/">Home</a></li>
           <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
-          <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
+          <li><a href="/ZuidFx/collaborate/" class="active">Collaborate</a></li>
           <li><a href="/ZuidFx/about/">About Me</a></li>
           <li><a href="/ZuidFx/reviews/">Reviews</a></li>
         </ul>
+        <div class="mobile-nav-wrapper" id="mobileWrapper">
+          <div id="mobileNav" class="mobile-nav">
+            <a href="/ZuidFx/">Home</a>
+            <a href="/ZuidFx/portfolio/">Portfolio</a>
+            <a href="/ZuidFx/collaborate/" class="active">Collaborate</a>
+            <a href="/ZuidFx/about/">About Me</a>
+            <a href="/ZuidFx/reviews/">Reviews</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main data-aos="fade-up">
     <h1>🤝 Let’s collaborate!</h1>
     <div class="subheading">Got an idea? Let's make something original, together.</div>
     <p>
@@ -264,14 +330,19 @@
     &copy; 2025 ZuidFx – Let’s create something legendary. · <a href="/ZuidFx/portfolio/">View my work</a>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({ once: true });
     function toggleForm() {
       const form = document.getElementById("formContainer");
       const arrow = document.getElementById("arrow");
       form.classList.toggle("open");
       arrow.textContent = form.classList.contains("open") ? "▲" : "▼";
     }
+    function toggleMenu() {
+      const wrapper = document.getElementById('mobileWrapper');
+      wrapper.classList.toggle('active');
+    }
   </script>
-
 </body>
 </html>
