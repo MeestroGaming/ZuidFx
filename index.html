@@ -17,249 +17,77 @@
       color: #ffffff;
       scroll-behavior: smooth;
     }
-    header {
-      background-color: #0d0d0d;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      position: relative;
-      z-index: 100;
-    }
-    .header-inner {
+    header { background-color: #0d0d0d; box-shadow: 0 2px 6px rgba(0,0,0,0.3); position: relative; z-index: 100; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; }
+    .logo-link { display: flex; align-items: center; text-decoration: none; gap: 0.4rem; }
+    .logo-link img { height: 42px; }
+    .logo-text { font-size: 1.4rem; font-weight: bold; color: #ffffff; line-height: 1; }
+    nav ul { list-style: none; display: flex; gap: 2rem; padding: 0; margin: 0; }
+    nav a { color: #e53935; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+    nav a:hover { color: #ffffff; }
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; color: white; cursor: pointer; position: absolute; right: 1.5rem; top: 1rem; z-index: 1000; }
+    .mobile-nav-wrapper { position: absolute; top: 100%; left: 0; width: 100%; background-color: #0d0d0d; overflow: hidden; max-height: 0; opacity: 0; transition: max-height 0.4s ease, opacity 0.4s ease; }
+    .mobile-nav-wrapper.active { max-height: 300px; opacity: 1; }
+    .mobile-nav { display: flex; flex-direction: column; gap: 1rem; padding: 1rem 0; text-align: center; }
+    .mobile-nav a { display: block; padding: 0.5rem 1rem; font-size: 1.1rem; color: #e53935; font-weight: bold; text-decoration: none; }
+    .mobile-nav a:hover { color: #ffffff; }
+
+    .banner { text-align: center; margin-top: 3rem; padding: 0 1rem; }
+    .banner h1 { font-size: 2.4rem; }
+    .banner p { font-size: 1.1rem; color: #cccccc; margin-top: 0.5rem; }
+
+    .intro { margin-top: 2rem; font-size: 1rem; color: #dddddd; line-height: 1.6; text-align: center; padding: 0 1.5rem; }
+
+    .usp-section {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem 1.5rem;
-    }
-    .logo-link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      gap: 0.4rem;
-    }
-    .logo-link img {
-      height: 42px;
-    }
-    .logo-text {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #ffffff;
-      line-height: 1;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-    }
-    nav a {
-      color: #e53935;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffffff;
-    }
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      color: white;
-      cursor: pointer;
-      position: absolute;
-      right: 1.5rem;
-      top: 1rem;
-      z-index: 1000;
-    }
-    .mobile-nav-wrapper {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #0d0d0d;
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      transition: max-height 0.4s ease, opacity 0.4s ease;
-    }
-    .mobile-nav-wrapper.active {
-      max-height: 300px;
-      opacity: 1;
-    }
-    .mobile-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    .mobile-nav a {
-      display: block;
-      padding: 0.5rem 1rem;
-      font-size: 1.1rem;
-      color: #e53935;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .mobile-nav a:hover {
-      color: #ffffff;
-    }
-    .banner {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 0 1rem;
-    }
-    .banner h1 {
-      font-size: 2.4rem;
-    }
-    .banner p {
-      font-size: 1.1rem;
-      color: #cccccc;
-      margin-top: 0.5rem;
-    }
-    .intro {
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: #dddddd;
-      line-height: 1.6;
-      text-align: center;
-      padding: 0 1.5rem;
-    }
-    .cta-buttons {
-      margin-top: 1.5rem;
-    }
-    .cta-buttons a {
-      background-color: #e53935;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      margin: 0.5rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-      display: inline-block;
-    }
-    .cta-buttons a:hover {
-      background-color: #ff6f60;
-    }
-    .latest-visuals {
-      margin-top: 3rem;
-      padding: 0 1rem 4rem;
-    }
-    .latest-visuals h2 {
-      color: #ffffff;
-      font-size: 1.6rem;
-      border-left: 5px solid #e53935;
-      padding-left: 0.8rem;
-      margin-bottom: 1.5rem;
-    }
-    .visual-grid {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
+      justify-content: space-around;
       flex-wrap: wrap;
-    }
-    .visual {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-    .visual img {
-      width: 100%;
-      max-width: 280px;
-      border-radius: 8px;
-      border: 1px solid #333;
-      transition: transform 0.3s ease;
-    }
-    .visual:hover img {
-      transform: scale(1.05);
-    }
-    .caption {
-      position: absolute;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      width: 100%;
-      text-align: center;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .visual:hover .caption {
-      opacity: 1;
-    }
-    .reviews-preview {
-      margin-top: 5rem;
-      padding: 3rem 1.5rem 5rem;
-      text-align: center;
+      padding: 3rem 1rem;
       background-color: #121212;
-      border-top: 1px solid #2e2e2e;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
     }
-    .reviews-preview h2 {
-      font-size: 2rem;
-      color: #ffffff;
-      border-left: 5px solid #e53935;
-      padding-left: 0.8rem;
-      display: inline-block;
-      margin-bottom: 1.2rem;
-    }
-    .reviews-preview blockquote {
-      font-style: italic;
-      color: #cccccc;
-      margin: 0 auto 1.2rem;
-      max-width: 600px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .reviews-preview blockquote span {
-      color: #e53935;
-      font-weight: bold;
-    }
-    .review-link {
-      color: #e53935;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .review-link:hover {
-      text-decoration: underline;
-    }
-    footer {
+    .usp-block {
+      max-width: 280px;
       text-align: center;
-      padding: 2rem 1rem;
-      color: #888;
-      font-size: 0.9rem;
-      border-top: 1px solid #2e2e2e;
+      margin: 1rem;
     }
-    footer a {
+    .usp-block h3 {
       color: #e53935;
-      text-decoration: none;
-      font-weight: bold;
+      margin-bottom: 0.5rem;
     }
+    .usp-block p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .cta-buttons { margin-top: 1.5rem; text-align: center; }
+    .cta-buttons a { background-color: #e53935; color: white; padding: 1rem 2rem; font-size: 1rem; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; margin: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); display: inline-block; }
+    .cta-buttons a:hover { background-color: #ff6f60; }
+
+    .latest-visuals { margin-top: 3rem; padding: 0 1rem 4rem; text-align: center; }
+    .latest-visuals h2 { font-size: 1.8rem; margin-bottom: 1rem; border-left: 5px solid #e53935; padding-left: 0.8rem; display: inline-block; }
+    .latest-visuals p { color: #bbb; margin-bottom: 2rem; }
+    .visual-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .visual { position: relative; overflow: hidden; border-radius: 8px; transition: transform 0.3s ease; }
+    .visual img { width: 100%; max-width: 280px; border-radius: 8px; border: 1px solid #333; transition: transform 0.3s ease; }
+    .visual:hover img { transform: scale(1.05); }
+    .caption { position: absolute; bottom: 0; background: rgba(0, 0, 0, 0.7); color: white; width: 100%; text-align: center; padding: 0.5rem; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s ease; }
+    .visual:hover .caption { opacity: 1; }
+
+    .reviews-preview { margin-top: 5rem; padding: 3rem 1.5rem 5rem; text-align: center; background-color: #121212; border-top: 1px solid #2e2e2e; }
+    .reviews-preview h2 { font-size: 2rem; border-left: 5px solid #e53935; padding-left: 0.8rem; display: inline-block; margin-bottom: 1.2rem; }
+    .reviews-preview blockquote { font-style: italic; color: #cccccc; margin: 0 auto 1.2rem; max-width: 600px; font-size: 1.1rem; line-height: 1.6; }
+    .reviews-preview blockquote span { color: #e53935; font-weight: bold; }
+    .review-link { color: #e53935; font-weight: bold; text-decoration: none; font-size: 1rem; }
+
+    footer { text-align: center; padding: 2rem 1rem; color: #888; font-size: 0.9rem; border-top: 1px solid #2e2e2e; }
+    footer a { color: #e53935; text-decoration: none; font-weight: bold; }
+
     @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .banner h1 {
-        font-size: 1.8rem;
-      }
-      .banner p,
-      .intro {
-        font-size: 1rem;
-        padding: 0 1rem;
-      }
-      .cta-buttons a {
-        width: 100%;
-        max-width: 280px;
-      }
+      nav ul { display: none; }
+      .menu-toggle { display: block; }
+      .usp-section { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -300,7 +128,7 @@
 
     <section class="intro" data-aos="fade-up" data-aos-delay="100">
       <p>
-        I'm a graphic designer from the Netherlands, blending football culture with clean, striking visuals. <br/>
+        I'm a graphic designer from the Netherlands, blending football culture with clean, striking visuals.<br/>
         Specialized in kitswaps, matchday graphics, and mobile-ready wallpapers.
       </p>
       <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
@@ -309,8 +137,24 @@
       </div>
     </section>
 
+    <section class="usp-section" data-aos="fade-up" data-aos-delay="250">
+      <div class="usp-block">
+        <h3>⚡ Fast Turnaround</h3>
+        <p>Most visuals delivered within 48h, ready to post.</p>
+      </div>
+      <div class="usp-block">
+        <h3>🎨 Tailor-Made Graphics</h3>
+        <p>Unique visuals crafted for your brand, club or event.</p>
+      </div>
+      <div class="usp-block">
+        <h3>🌍 Global Reach</h3>
+        <p>Seen by thousands of fans, creators, and clubs worldwide.</p>
+      </div>
+    </section>
+
     <section class="latest-visuals" data-aos="fade-up" data-aos-delay="300">
       <h2>Latest Visuals</h2>
+      <p>Recent Instagram drops — click to view full post.</p>
       <div class="visual-grid">
         <div class="visual">
           <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank">
@@ -335,9 +179,7 @@
 
     <section class="reviews-preview" data-aos="fade-up">
       <h2>This is what others say</h2>
-      <blockquote>
-        “ZuidFx reviews coming soon....” – <span>@ZuidFx</span>
-      </blockquote>
+      <blockquote>“ZuidFx reviews coming soon....” – <span>@ZuidFx</span></blockquote>
       <a class="review-link" href="/ZuidFx/reviews/">See more reviews →</a>
     </section>
   </main>
