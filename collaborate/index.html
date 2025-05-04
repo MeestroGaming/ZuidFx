@@ -194,7 +194,6 @@
       border-radius: 8px;
       padding: 2rem;
       text-align: left;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
     form label {
@@ -258,6 +257,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="header-inner">
       <a href="/ZuidFx/" class="logo-link">
@@ -303,7 +303,7 @@
 
     <div id="formContainer" class="collab-form-wrapper">
       <form action="https://formsubmit.co/zuidfx.design@gmail.com" method="POST">
-        <input type="hidden" name="_redirect" value="https://meestrogaming.github.io/ZuidFx/thank-you.html">
+        <input type="hidden" name="_next" value="https://meestrogaming.github.io/ZuidFx/thank-you.html">
         <input type="hidden" name="_captcha" value="false">
 
         <label for="name">Your Name</label>
@@ -334,18 +334,17 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true });
-
     function toggleForm() {
       const form = document.getElementById("formContainer");
       const arrow = document.getElementById("arrow");
       form.classList.toggle("open");
       arrow.textContent = form.classList.contains("open") ? "▲" : "▼";
     }
-
     function toggleMenu() {
       const wrapper = document.getElementById('mobileWrapper');
       wrapper.classList.toggle('active');
     }
   </script>
+
 </body>
 </html>
