@@ -190,11 +190,12 @@
 
     form {
       background-color: #1f1f1f;
-      border: 1px solid #333;
+      border: 2px solid #e53935;
       border-radius: 12px;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       text-align: left;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+      max-width: 100%;
     }
 
     form label {
@@ -208,18 +209,17 @@
       width: 100%;
       padding: 0.85rem 1rem;
       margin-bottom: 1.5rem;
-      border: 1.5px solid #e53935;
-      border-radius: 8px;
+      border: 1px solid #333;
+      border-radius: 5px;
       background-color: #121212;
       color: #ffffff;
       font-size: 1rem;
       outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     form input:focus, form select:focus, form textarea:focus {
-      border-color: #ff6f60;
-      box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.3);
+      border-color: #333;
+      box-shadow: none;
     }
 
     form button {
