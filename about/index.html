@@ -18,6 +18,10 @@
       scroll-behavior: smooth;
     }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     header {
       background-color: #0d0d0d;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -70,6 +74,11 @@
       color: #ffffff;
     }
 
+    nav a.active {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
     .menu-toggle {
       display: none;
       background: none;
@@ -118,6 +127,10 @@
     }
 
     .mobile-nav a:hover {
+      color: #ffffff;
+    }
+
+    .mobile-nav a.active {
       color: #ffffff;
     }
 
@@ -231,7 +244,7 @@
           <li><a href="/ZuidFx/">Home</a></li>
           <li><a href="/ZuidFx/portfolio/">Portfolio</a></li>
           <li><a href="/ZuidFx/collaborate/">Collaborate</a></li>
-          <li><a href="/ZuidFx/about/">About Me</a></li>
+          <li><a href="/ZuidFx/about/" class="active">About Me</a></li>
           <li><a href="/ZuidFx/reviews/">Reviews</a></li>
         </ul>
         <div class="mobile-nav-wrapper" id="mobileWrapper">
@@ -239,7 +252,7 @@
             <a href="/ZuidFx/">Home</a>
             <a href="/ZuidFx/portfolio/">Portfolio</a>
             <a href="/ZuidFx/collaborate/">Collaborate</a>
-            <a href="/ZuidFx/about/">About Me</a>
+            <a href="/ZuidFx/about/" class="active">About Me</a>
             <a href="/ZuidFx/reviews/">Reviews</a>
           </div>
         </div>
