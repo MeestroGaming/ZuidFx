@@ -40,8 +40,14 @@
     .mobile-nav a:hover { color: #ffffff; }
 
     .banner { text-align: center; margin-top: 3rem; padding: 0 1rem; }
-    .banner h1 { font-size: 2.4rem; }
-    .banner p { font-size: 1.1rem; color: #cccccc; margin-top: 0.5rem; }
+    .banner h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      letter-spacing: -0.5px;
+    }
+    .banner p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #bbbbbb;
+    }
 
     .intro { margin-top: 2rem; font-size: 1rem; color: #dddddd; line-height: 1.6; text-align: center; padding: 0 1.5rem; }
 
@@ -50,7 +56,7 @@
       justify-content: space-around;
       flex-wrap: wrap;
       padding: 3rem 1rem;
-      background-color: #121212;
+      background-color: #101010;
       border-top: 1px solid #222;
       border-bottom: 1px solid #222;
     }
@@ -69,20 +75,45 @@
     }
 
     .cta-buttons { margin-top: 1.5rem; text-align: center; }
-    .cta-buttons a { background-color: #e53935; color: white; padding: 1rem 2rem; font-size: 1rem; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; margin: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); display: inline-block; }
-    .cta-buttons a:hover { background-color: #ff6f60; }
+    .cta-buttons a {
+      background-color: #e53935;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      margin: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      display: inline-block;
+      transform: scale(1);
+    }
+    .cta-buttons a:hover {
+      transform: scale(1.05);
+      background-color: #ff6f60;
+    }
 
-    .latest-visuals { margin-top: 3rem; padding: 0 1rem 4rem; text-align: center; }
-    .latest-visuals h2 { font-size: 1.8rem; margin-bottom: 1rem; border-left: 5px solid #e53935; padding-left: 0.8rem; display: inline-block; }
+    .latest-visuals { margin-top: 3rem; padding: 0 1rem 4rem; text-align: center; background-color: #0d0d0d; }
+    .latest-visuals h2 { font-size: 2rem; margin-bottom: 1rem; border-left: 5px solid #e53935; padding-left: 0.8rem; display: inline-block; }
     .latest-visuals p { color: #bbb; margin-bottom: 2rem; }
     .visual-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
     .visual { position: relative; overflow: hidden; border-radius: 8px; transition: transform 0.3s ease; }
-    .visual img { width: 100%; max-width: 280px; border-radius: 8px; border: 1px solid #333; transition: transform 0.3s ease; }
-    .visual:hover img { transform: scale(1.05); }
+    .visual img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .visual:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(229, 57, 53, 0.3);
+    }
     .caption { position: absolute; bottom: 0; background: rgba(0, 0, 0, 0.7); color: white; width: 100%; text-align: center; padding: 0.5rem; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s ease; }
     .visual:hover .caption { opacity: 1; }
 
-    .reviews-preview { margin-top: 5rem; padding: 3rem 1.5rem 5rem; text-align: center; background-color: #121212; border-top: 1px solid #2e2e2e; }
+    .reviews-preview { margin-top: 5rem; padding: 3rem 1.5rem 5rem; text-align: center; background-color: #0b0b0b; border-top: 1px solid #2e2e2e; }
     .reviews-preview h2 { font-size: 2rem; border-left: 5px solid #e53935; padding-left: 0.8rem; display: inline-block; margin-bottom: 1.2rem; }
     .reviews-preview blockquote { font-style: italic; color: #cccccc; margin: 0 auto 1.2rem; max-width: 600px; font-size: 1.1rem; line-height: 1.6; }
     .reviews-preview blockquote span { color: #e53935; font-weight: bold; }
@@ -162,19 +193,19 @@
     <h2>Latest Visuals</h2>
     <p>Recent Instagram drops — click to view full post.</p>
     <div class="visual-grid">
-      <div class="visual">
+      <div class="visual" data-aos="fade-up" data-aos-delay="0">
         <a href="https://www.instagram.com/p/DHg0A6KsniJ/?img_index=1" target="_blank">
           <img src="/ZuidFx/assets/images/example1.png" alt="Feyenoord kit visual 1" loading="lazy">
           <div class="caption">Matchday Graphic 1</div>
         </a>
       </div>
-      <div class="visual">
+      <div class="visual" data-aos="fade-up" data-aos-delay="100">
         <a href="https://www.instagram.com/p/DHbnx0gMWAK/" target="_blank">
           <img src="/ZuidFx/assets/images/example2.png" alt="Feyenoord kit visual 2" loading="lazy">
           <div class="caption">Kit Swap – Away Edition</div>
         </a>
       </div>
-      <div class="visual">
+      <div class="visual" data-aos="fade-up" data-aos-delay="200">
         <a href="https://www.instagram.com/p/DGlTIk6MV9f/" target="_blank">
           <img src="/ZuidFx/assets/images/example3.png" alt="Feyenoord matchday graphic" loading="lazy">
           <div class="caption">Wallpaper Drop</div>
